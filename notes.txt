@@ -1,0 +1,51 @@
+Confluent All in One: https://github.com/confluentinc/cp-all-in-one
+Confluent Kakfa: https://hub.docker.com/r/confluentinc/cp-kafka
+Confluent ZooKeeper: https://hub.docker.com/r/confluentinc/cp-zookeeper
+
+Apache Kafka: https://hub.docker.com/r/apache/kafka
+    https://kafka.apache.org/downloads
+
+Apache ZooKeeper: https://hub.docker.com/_/zookeeper
+
+Start-up with Docker-compose
+docker-compose -f ./docker-compose.yml up
+
+Tear down with Docker-compose
+docker-compose -f ./docker-compose.yml down
+
+Docker Exec into Running Kafka Instance
+docker exec -it [name of running kafka docker container] /bin/bash
+
+docker exec -it kafka1 /bin/bash
+
+---Create Kafka Topic
+(https://www.youtube.com/watch?v=GUb0kVdug-g)
+docker exec kafka1 kafka-topics --bootstrap-server kafka1:9092 --create --topic my_topic_1
+
+
+
+---Write to Kafka Topic
+docker exec kafka1 kafka-console-producer --broker-list kafka1:9092 --topic my_topic_1 asdfsaasf  
+docker exec kafka1 kafka-console-producer --broker-list kafka1:9092 --topic my_topic_1 asdfsaasfsafdsafa23q4242342
+
+
+
+
+Tutorial Docker Images:
+https://www.youtube.com/@getconduktor/videos
+https://github.com/conduktor/kafka-stack-docker-compose
+
+https://www.youtube.com/watch?v=Zq8aMrRnvQE
+https://www.youtube.com/watch?v=MLQdvZmAUqM
+
+
+Kafka UI - https://hub.docker.com/r/provectuslabs/kafka-ui/tags
+
+
+https://github.com/wurstmeister/kafka-docker
+https://github.com/wurstmeister/zookeeper-docker
+
+
+kafka-topics.sh --create --topic testme-1 --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+
+https://www.youtube.com/watch?v=R873BlNVUB4
